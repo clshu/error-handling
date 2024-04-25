@@ -1,1 +1,2 @@
-[Rust Error Handling](https://www.youtube.com/watch?v=j-VQCYP7wyw)
+# Rust Error Handling
+- [Rust Error Handling](https://www.youtube.com/watch?v=j-VQCYP7wyw)
