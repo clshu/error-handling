@@ -13,7 +13,8 @@ fn main() -> Result<()> {
 }
 
 fn list_files(path: &str) -> Result<Vec<String>> {
-    let files: Vec<String> = fs::read_dir(path)?
+    let files: Vec<String> = fs::read_dir(path)
+        .map_err(|ex| format!("errpr whil reading dir: cause {ex} "))?
         .filter_map(|re| re.ok())
         .filter(|e| e.file_type().map(|ft| ft.is_file()).unwrap_or(false))
         .filter_map(|e| e.file_name().into_string().ok())
