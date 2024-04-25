@@ -1,8 +1,7 @@
-pub type Result<T> = core::result::Result<T, Error>;
-pub type Error = Box<dyn std::error::Error>; // for early development
-
+mod error;
 mod fs;
 
+use self::error::Result;
 use crate::fs::list_files;
 
 fn main() -> Result<()> {
