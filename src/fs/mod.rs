@@ -11,3 +11,28 @@ pub fn list_files(path: &str) -> Result<Vec<String>> {
     }
     Ok(files)
 }
+
+// 1tm -> 10x-test-module-01
+// region:    --- Tests
+
+#[cfg(test)]
+mod tests {
+    type Error = Box<dyn std::error::Error>;
+    type Result<T> = core::result::Result<T, Error>; // For tests.
+
+    // use super::*;
+
+    // 1tf -> 10x-test-fn-with-comment-01
+    #[test]
+    fn test_name() -> Result<()> {
+        // -- Setup & Fixtures
+
+        // -- Exec
+
+        // -- Check
+
+        Ok(())
+    }
+}
+
+// endregion: --- Tests
